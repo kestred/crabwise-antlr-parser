@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["Kevin Stenerson <developer@stenerson.me>"]
 edition = "2018"
 
+license = "MIT/Apache-2.0"
+description = "An (incomplete) implementation of the ANTLR grammar for Rust's `proc_macro` API"
+
 [dependencies]
 combine = "3.8.1"
 combine-proc-macro = "0.2.0"

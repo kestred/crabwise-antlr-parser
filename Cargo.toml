@@ -1,7 +1,10 @@
 [package]
-name = "crabwise-antlr"
+name = "crabwise-antlr-parser"
 version = "0.1.0"
 authors = ["Kevin Stenerson <developer@stenerson.me>"]
 edition = "2018"
 
 [dependencies]
+combine = "3.8.1"
+combine-proc-macro = "0.2.0"
+either = "1.5.2"

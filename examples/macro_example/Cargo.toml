@@ -9,7 +9,6 @@ proc-macro = true
 
 [dependencies]
 combine = "3.8.1"
-combine-proc-macro = "0.2.1"
+combine-proc-macro = "0.3.0"
 crabwise-antlr-parser = { path = "../.." }
 quote = "0.6.12"
-proc-macro2 = "0.4.29"

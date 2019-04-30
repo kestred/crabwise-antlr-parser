@@ -1,6 +1,6 @@
 [package]
 name = "crabwise-antlr-parser"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Kevin Stenerson <developer@stenerson.me>"]
 edition = "2018"
 
@@ -9,5 +9,5 @@ description = "An (incomplete) implementation of the ANTLR grammar for Rust's `p
 
 [dependencies]
 combine = "3.8.1"
-combine-proc-macro = "0.2.0"
+combine-proc-macro = "0.3.0"
 either = "1.5.2"

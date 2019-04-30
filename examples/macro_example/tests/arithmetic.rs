@@ -152,32 +152,32 @@ fn test_inspect_ast() {
     assert_eq!(ARITHMETIC, r#"Grammar {
     name: Ident {
         ident: "ARITHMETIC",
-        span: #0 bytes(1557..1567)
+        span: #3 bytes(1506..2762)
     },
     rules: [
         Rule {
             name: Ident {
                 ident: "equation",
-                span: #0 bytes(1574..1582)
+                span: #3 bytes(1506..2762)
             },
             pattern: Series(
                 [
                     Ident(
                         Ident {
                             ident: "expression",
-                            span: #0 bytes(1593..1603)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Ident(
                         Ident {
                             ident: "relop",
-                            span: #0 bytes(1604..1609)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Ident(
                         Ident {
                             ident: "expression",
-                            span: #0 bytes(1610..1620)
+                            span: #3 bytes(1506..2762)
                         }
                     )
                 ]
@@ -186,14 +186,14 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "expression",
-                span: #0 bytes(1636..1646)
+                span: #3 bytes(1506..2762)
             },
             pattern: Series(
                 [
                     Ident(
                         Ident {
                             ident: "term",
-                            span: #0 bytes(1657..1661)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Repeat {
@@ -204,13 +204,13 @@ fn test_inspect_ast() {
                                         Ident(
                                             Ident {
                                                 ident: "PLUS",
-                                                span: #0 bytes(1664..1668)
+                                                span: #3 bytes(1506..2762)
                                             }
                                         ),
                                         Ident(
                                             Ident {
                                                 ident: "MINUS",
-                                                span: #0 bytes(1671..1676)
+                                                span: #3 bytes(1506..2762)
                                             }
                                         )
                                     ]
@@ -218,7 +218,7 @@ fn test_inspect_ast() {
                                 Ident(
                                     Ident {
                                         ident: "term",
-                                        span: #0 bytes(1678..1682)
+                                        span: #3 bytes(1506..2762)
                                     }
                                 )
                             ]
@@ -231,14 +231,14 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "term",
-                span: #0 bytes(1700..1704)
+                span: #3 bytes(1506..2762)
             },
             pattern: Series(
                 [
                     Ident(
                         Ident {
                             ident: "factor",
-                            span: #0 bytes(1715..1721)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Repeat {
@@ -249,13 +249,13 @@ fn test_inspect_ast() {
                                         Ident(
                                             Ident {
                                                 ident: "TIMES",
-                                                span: #0 bytes(1724..1729)
+                                                span: #3 bytes(1506..2762)
                                             }
                                         ),
                                         Ident(
                                             Ident {
                                                 ident: "DIV",
-                                                span: #0 bytes(1732..1735)
+                                                span: #3 bytes(1506..2762)
                                             }
                                         )
                                     ]
@@ -263,7 +263,7 @@ fn test_inspect_ast() {
                                 Ident(
                                     Ident {
                                         ident: "factor",
-                                        span: #0 bytes(1737..1743)
+                                        span: #3 bytes(1506..2762)
                                     }
                                 )
                             ]
@@ -276,14 +276,14 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "factor",
-                span: #0 bytes(1761..1767)
+                span: #3 bytes(1506..2762)
             },
             pattern: Series(
                 [
                     Ident(
                         Ident {
                             ident: "signedAtom",
-                            span: #0 bytes(1778..1788)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Repeat {
@@ -292,13 +292,13 @@ fn test_inspect_ast() {
                                 Ident(
                                     Ident {
                                         ident: "POW",
-                                        span: #0 bytes(1790..1793)
+                                        span: #3 bytes(1506..2762)
                                     }
                                 ),
                                 Ident(
                                     Ident {
                                         ident: "signedAtom",
-                                        span: #0 bytes(1794..1804)
+                                        span: #3 bytes(1506..2762)
                                     }
                                 )
                             ]
@@ -311,7 +311,7 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "signedAtom",
-                span: #0 bytes(1822..1832)
+                span: #3 bytes(1506..2762)
             },
             pattern: Choice(
                 [
@@ -320,13 +320,13 @@ fn test_inspect_ast() {
                             Ident(
                                 Ident {
                                     ident: "PLUS",
-                                    span: #0 bytes(1843..1847)
+                                    span: #3 bytes(1506..2762)
                                 }
                             ),
                             Ident(
                                 Ident {
                                     ident: "signedAtom",
-                                    span: #0 bytes(1848..1858)
+                                    span: #3 bytes(1506..2762)
                                 }
                             )
                         ]
@@ -336,13 +336,13 @@ fn test_inspect_ast() {
                             Ident(
                                 Ident {
                                     ident: "MINUS",
-                                    span: #0 bytes(1869..1874)
+                                    span: #3 bytes(1506..2762)
                                 }
                             ),
                             Ident(
                                 Ident {
                                     ident: "signedAtom",
-                                    span: #0 bytes(1875..1885)
+                                    span: #3 bytes(1506..2762)
                                 }
                             )
                         ]
@@ -350,7 +350,7 @@ fn test_inspect_ast() {
                     Ident(
                         Ident {
                             ident: "atom",
-                            span: #0 bytes(1896..1900)
+                            span: #3 bytes(1506..2762)
                         }
                     )
                 ]
@@ -359,20 +359,20 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "atom",
-                span: #0 bytes(1916..1920)
+                span: #3 bytes(1506..2762)
             },
             pattern: Choice(
                 [
                     Ident(
                         Ident {
                             ident: "scientific",
-                            span: #0 bytes(1931..1941)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Ident(
                         Ident {
                             ident: "variable",
-                            span: #0 bytes(1952..1960)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Series(
@@ -380,19 +380,19 @@ fn test_inspect_ast() {
                             Ident(
                                 Ident {
                                     ident: "LPAREN",
-                                    span: #0 bytes(1971..1977)
+                                    span: #3 bytes(1506..2762)
                                 }
                             ),
                             Ident(
                                 Ident {
                                     ident: "expression",
-                                    span: #0 bytes(1978..1988)
+                                    span: #3 bytes(1506..2762)
                                 }
                             ),
                             Ident(
                                 Ident {
                                     ident: "RPAREN",
-                                    span: #0 bytes(1989..1995)
+                                    span: #3 bytes(1506..2762)
                                 }
                             )
                         ]
@@ -403,50 +403,50 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "scientific",
-                span: #0 bytes(2011..2021)
+                span: #3 bytes(1506..2762)
             },
             pattern: Ident(
                 Ident {
                     ident: "SCIENTIFIC_NUMBER",
-                    span: #0 bytes(2032..2049)
+                    span: #3 bytes(1506..2762)
                 }
             )
         },
         Rule {
             name: Ident {
                 ident: "variable",
-                span: #0 bytes(2065..2073)
+                span: #3 bytes(1506..2762)
             },
             pattern: Ident(
                 Ident {
                     ident: "VARIABLE",
-                    span: #0 bytes(2084..2092)
+                    span: #3 bytes(1506..2762)
                 }
             )
         },
         Rule {
             name: Ident {
                 ident: "relop",
-                span: #0 bytes(2108..2113)
+                span: #3 bytes(1506..2762)
             },
             pattern: Choice(
                 [
                     Ident(
                         Ident {
                             ident: "EQ",
-                            span: #0 bytes(2124..2126)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Ident(
                         Ident {
                             ident: "GT",
-                            span: #0 bytes(2137..2139)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Ident(
                         Ident {
                             ident: "LT",
-                            span: #0 bytes(2150..2152)
+                            span: #3 bytes(1506..2762)
                         }
                     )
                 ]
@@ -455,21 +455,21 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "VARIABLE",
-                span: #0 bytes(2169..2177)
+                span: #3 bytes(1506..2762)
             },
             pattern: Series(
                 [
                     Ident(
                         Ident {
                             ident: "VALID_ID_START",
-                            span: #0 bytes(2188..2202)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Repeat {
                         pattern: Ident(
                             Ident {
                                 ident: "VALID_ID_CHAR",
-                                span: #0 bytes(2204..2217)
+                                span: #3 bytes(1506..2762)
                             }
                         ),
                         repeat: ZeroOrMore
@@ -480,14 +480,14 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "SCIENTIFIC_NUMBER",
-                span: #0 bytes(2235..2252)
+                span: #3 bytes(1506..2762)
             },
             pattern: Series(
                 [
                     Ident(
                         Ident {
                             ident: "NUMBER",
-                            span: #0 bytes(2263..2269)
+                            span: #3 bytes(1506..2762)
                         }
                     ),
                     Repeat {
@@ -496,14 +496,14 @@ fn test_inspect_ast() {
                                 Ident(
                                     Ident {
                                         ident: "E",
-                                        span: #0 bytes(2271..2272)
+                                        span: #3 bytes(1506..2762)
                                     }
                                 ),
                                 Repeat {
                                     pattern: Ident(
                                         Ident {
                                             ident: "SIGN",
-                                            span: #0 bytes(2274..2278)
+                                            span: #3 bytes(1506..2762)
                                         }
                                     ),
                                     repeat: ZeroOrOne
@@ -511,7 +511,7 @@ fn test_inspect_ast() {
                                 Ident(
                                     Ident {
                                         ident: "NUMBER",
-                                        span: #0 bytes(2281..2287)
+                                        span: #3 bytes(1506..2762)
                                     }
                                 )
                             ]
@@ -524,120 +524,120 @@ fn test_inspect_ast() {
         Rule {
             name: Ident {
                 ident: "LPAREN",
-                span: #0 bytes(2305..2311)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char((), suffix: None, span: Span { lo: BytePos(2322), hi: BytePos(2325), ctxt: #0 } }
+                Literal { lit: Char((), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "RPAREN",
-                span: #0 bytes(2342..2348)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char()), suffix: None, span: Span { lo: BytePos(2359), hi: BytePos(2362), ctxt: #0 } }
+                Literal { lit: Char()), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "PLUS",
-                span: #0 bytes(2379..2383)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(+), suffix: None, span: Span { lo: BytePos(2394), hi: BytePos(2397), ctxt: #0 } }
+                Literal { lit: Char(+), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "MINUS",
-                span: #0 bytes(2414..2419)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(-), suffix: None, span: Span { lo: BytePos(2430), hi: BytePos(2433), ctxt: #0 } }
+                Literal { lit: Char(-), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "TIMES",
-                span: #0 bytes(2450..2455)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(*), suffix: None, span: Span { lo: BytePos(2466), hi: BytePos(2469), ctxt: #0 } }
+                Literal { lit: Char(*), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "DIV",
-                span: #0 bytes(2486..2489)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(/), suffix: None, span: Span { lo: BytePos(2500), hi: BytePos(2503), ctxt: #0 } }
+                Literal { lit: Char(/), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "GT",
-                span: #0 bytes(2520..2522)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(>), suffix: None, span: Span { lo: BytePos(2533), hi: BytePos(2536), ctxt: #0 } }
+                Literal { lit: Char(>), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "LT",
-                span: #0 bytes(2553..2555)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(<), suffix: None, span: Span { lo: BytePos(2566), hi: BytePos(2569), ctxt: #0 } }
+                Literal { lit: Char(<), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "EQ",
-                span: #0 bytes(2586..2588)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(=), suffix: None, span: Span { lo: BytePos(2599), hi: BytePos(2602), ctxt: #0 } }
+                Literal { lit: Char(=), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "POINT",
-                span: #0 bytes(2619..2624)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(.), suffix: None, span: Span { lo: BytePos(2635), hi: BytePos(2638), ctxt: #0 } }
+                Literal { lit: Char(.), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "POW",
-                span: #0 bytes(2655..2658)
+                span: #3 bytes(1506..2762)
             },
             pattern: Literal(
-                Literal { lit: Char(^), suffix: None, span: Span { lo: BytePos(2669), hi: BytePos(2672), ctxt: #0 } }
+                Literal { lit: Char(^), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
             )
         },
         Rule {
             name: Ident {
                 ident: "WS",
-                span: #0 bytes(2689..2691)
+                span: #3 bytes(1506..2762)
             },
             pattern: Choice(
                 [
                     Literal(
-                        Literal { lit: Char( ), suffix: None, span: Span { lo: BytePos(2702), hi: BytePos(2705), ctxt: #0 } }
+                        Literal { lit: Char( ), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
                     ),
                     Literal(
-                        Literal { lit: Char(\t), suffix: None, span: Span { lo: BytePos(2716), hi: BytePos(2720), ctxt: #0 } }
+                        Literal { lit: Char(\t), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
                     ),
                     Literal(
-                        Literal { lit: Char(\n), suffix: None, span: Span { lo: BytePos(2731), hi: BytePos(2735), ctxt: #0 } }
+                        Literal { lit: Char(\n), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
                     ),
                     Literal(
-                        Literal { lit: Char(\r), suffix: None, span: Span { lo: BytePos(2746), hi: BytePos(2750), ctxt: #0 } }
+                        Literal { lit: Char(\r), suffix: None, span: Span { lo: BytePos(1506), hi: BytePos(2762), ctxt: #3 } }
                     )
                 ]
             )

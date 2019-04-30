@@ -1,4 +1,4 @@
-use proc_macro::{Ident, Literal};
+use combine_proc_macro::{Ident, Literal};
 
 #[derive(Debug)]
 pub struct Grammar {
@@ -35,10 +35,10 @@ pub enum Pattern {
     /// A pre-condition to check before parsing a tree, typically
     /// to resolve syntactic ambiguity; e.g. the `(...) => ...` in:
     ///
-    ///     lhs_expression:
-    ///         ("new" expression) => newExpression
-    ///         | expression
-    ///         ;
+    /// >    lhs_expression:
+    /// >        ("new" expression) => newExpression
+    /// >        | expression
+    /// >        ;
     ///
     Predicate { pred: Box<Pattern>, expr: Box<Pattern> },
 }

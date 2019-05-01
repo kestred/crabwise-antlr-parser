@@ -10,12 +10,18 @@ pub struct Grammar {
 pub struct Rule {
     pub name: Ident,
     pub pattern: Pattern,
+    pub attributes: Vec<Attribute>,
+}
+
+#[derive(Debug)]
+pub enum Attribute {
+    Word(Ident), // e.g. `syn::Word`
+    Group(Ident, Vec<Attribute>), // e.g. `syn::Meta::List`
 }
 
 #[derive(Debug)]
 pub enum Pattern {
     Empty,
-
 
     /// A rule or terminal (e.g. `L_PAREN`)
     Ident(Ident),

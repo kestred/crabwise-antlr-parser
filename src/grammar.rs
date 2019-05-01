@@ -1,7 +1,7 @@
 use crate::ast::*;
 use combine::{parser as parse_fn, Parser};
 use combine::parser::choice::{choice, optional};
-use combine::parser::repeat::{many1, sep_by};
+use combine::parser::repeat::{many, many1, sep_by};
 use combine_proc_macro::parser;
 use combine_proc_macro::parser::{delim, ident, keyword, literal, punct};
 use either::Either;
@@ -15,18 +15,39 @@ parser!(fn grammar() -> Grammar {
 });
 
 parser!(fn rule() -> Rule {
-    ( optional(keyword("fragment"))
+    ( optional((punct('#'), delim('['), many(attribute()), delim(']')).map(|(_, _, list, _)| list))
+    , optional(keyword("fragment"))
     , ident()
     , punct(':')
     , pattern()
     , punct(';')
-    ).map(|(_, name, _, pattern, _)| Rule { name, pattern })
+    ).map(|(attrs, _, name, _, pattern, _)| {
+        Rule {
+            name,
+            pattern,
+            attributes: attrs.unwrap_or_default()
+        }
+    })
+});
+
+parser!(fn attribute() -> Attribute {
+    parse_fn(attribute_recursive)
+});
+
+parser!(fn attribute_recursive(input: &mut Input) -> Attribute {
+    ( ident()
+    , optional((delim('('), many1(attribute()), delim(')')))
+    )
+    .map(|(word, list)| match list {
+        Some((_, attrs, _)) => Attribute::Group(word, attrs),
+        None => Attribute::Word(word)
+    })
+    .parse_stream(input)
 });
 
 parser!(fn pattern() -> Pattern {
     parse_fn(pattern_recursive)
 });
-
 
 parser!(fn pattern_recursive(input: &mut Input) -> Pattern {
     sep_by(series(), punct('|'))
